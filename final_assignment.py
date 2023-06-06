@@ -53,11 +53,12 @@ day7 = data.iloc[50765:59893]
 day8 = data.iloc[59894:64570]
 day9 = data.iloc[64571:72511]
 day10 = data.iloc[72511:]
+#day1weight = day1.groupby(['source', 'target']).size().reset_index(name='weight')
 print(day1)
-
 # making graphs from the separate days
 
 G1 = nx.from_pandas_edgelist(day1,'source','target')
+#G1weight = nx.from_pandas_edgelist(day1weight,'source','target',edge_attr='weight')
 G2 = nx.from_pandas_edgelist(day2,'source','target')
 G3 = nx.from_pandas_edgelist(day3,'source','target')
 G4 = nx.from_pandas_edgelist(day4,'source','target')
